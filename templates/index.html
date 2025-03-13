@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sleepwell ChatBot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Left Panel: Chat List -->
+    <div class="chat-list-panel">
+      <div class="chat-list-header">
+        <h2>Chats</h2>
+        <button class="new-chat-btn">+</button>
+      </div>
+      <div class="chat-list-search">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="chat-list">
+        <!-- Example chat contacts (static placeholders) -->
+        <div class="chat-contact active">
+          <div class="avatar">S</div>
+          <div class="contact-info">
+            <div class="contact-name">Aradhya</div>
+            <div class="contact-preview">Can you find the conformable mattress?</div>
+          </div>
+          <div class="contact-time">12:35</div>
+          <div class="unread-count">100</div>
+        </div>
+        <div class="chat-contact">
+          <div class="avatar">D</div>
+          <div class="contact-info">
+            <div class="contact-name">Dhruv</div>
+            <div class="contact-preview">Can u find long lasting pillow..</div>
+          </div>
+          <div class="contact-time">12:35</div>
+          <div class="unread-count">99+</div>
+        </div>
+        <!-- Add more contacts as needed -->
+      </div>
+    </div>
+    
+    <!-- Right Panel: Chat Conversation -->
+    <div class="chat-conversation-panel">
+      <div class="conversation-header">
+        <div class="contact-info-header">
+          <div class="avatar">K</div>
+          <div class="contact-name">Sleepy ChatBot</div>
+          <div class="typing-status">Typing...</div>
+        </div>
+        <div class="call-actions">
+          <!-- Add icons if desired -->
+          <button class="call-btn">...</button>
+        </div>
+      </div>
+      
+      <div id="chat-box" class="conversation-messages">
+        <!-- Chat messages will appear here -->
+      </div>
+      
+      <form id="chat-form" class="conversation-input">
+        <input 
+          type="text" 
+          id="message" 
+          placeholder="Type a message" 
+          required 
+        />
+        <button type="button" class="attachment-btn">📎</button>
+        <button type="submit" class="send-btn">➤</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
